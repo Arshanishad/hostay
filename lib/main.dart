@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-
 import 'features/login/screens/welcome_screen.dart';
 
 void main() {
