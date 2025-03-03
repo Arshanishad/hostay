@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hostay/features/login/screens/signup_screen.dart';
-
 import '../../../core/common/globals.dart';
 
 class SignInScreen extends StatefulWidget {

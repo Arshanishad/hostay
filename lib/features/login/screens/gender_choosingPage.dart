@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hostay/features/login/screens/bottom_navbar.dart';
-
 import '../../../core/common/globals.dart';
 
 class GenderChooseIngPage extends StatefulWidget {
