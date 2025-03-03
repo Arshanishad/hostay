@@ -178,7 +178,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
               SizedBox(height: w*0.02),
-              Text("By creating an account,you are agree to our Terms",style: TextStyle(fontSize: w*0.04,color: Colors.grey),)
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: w*0.05),
+                child: Text("By creating an account,you are agree to our Terms",style: TextStyle(fontSize: w*0.04,color: Colors.grey),),
+              )
             ],
           ),
         ),

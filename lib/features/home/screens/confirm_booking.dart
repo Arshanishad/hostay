@@ -33,7 +33,7 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             ),
             SizedBox(height: w * 0.03),
       Padding(
-        padding: EdgeInsets.only(left: w*0.02,right: w*0.03),
+        padding: EdgeInsets.symmetric(horizontal: w*0.03),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
