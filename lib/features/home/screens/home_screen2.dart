@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/common/globals.dart';
+import '../../../core/widgets/custom_text.dart';
 
 class HomeScreen2 extends StatefulWidget {
   const HomeScreen2({super.key});
@@ -9,6 +10,7 @@ class HomeScreen2 extends StatefulWidget {
 }
 
 class _HomeScreen2State extends State<HomeScreen2> {
+  int selectedIndex=0;
   TextEditingController hotelController=TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -23,9 +25,10 @@ class _HomeScreen2State extends State<HomeScreen2> {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: w * 0.05),
-                  child: Text(
-                    'Current Location',
-                    style: TextStyle(fontSize: w * 0.035, color: Colors.grey),
+                  child:  CustomText(
+                    text: "Current Location ",
+                    fontSize: w * 0.035,
+                    color: Colors.grey,
                   ),
                 ),
                 Padding(
@@ -34,10 +37,11 @@ class _HomeScreen2State extends State<HomeScreen2> {
                     children: [
                       Icon(Icons.location_on, color: Colors.indigo, size: w * 0.05),
                       SizedBox(width: w * 0.02),
-                      Text(
-                        "Bibwewadi, Pune",
-                        style: TextStyle(
-                            fontSize: w * 0.04, color: Colors.black, fontWeight: FontWeight.w500),
+                      CustomText(
+                        text: "Bibwewadi,Pune ",
+                        fontSize: w * 0.04,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
                       ),
                       Icon(Icons.keyboard_arrow_down_outlined, color: Colors.black, size: w * 0.05),
                       const Spacer(),
@@ -114,8 +118,18 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Nearby your location",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: w*0.04),),
-                      Text("See all",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: w*0.04),),
+                      CustomText(
+                        text: "Nearby your location",
+                        fontSize: w * 0.04,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      CustomText(
+                        text: "See all ",
+                        fontSize: w * 0.04,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue,
+                      ),
                     ],
                   ),
                 ),
@@ -128,7 +142,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                     return InkWell(
                       onTap: () {
                         setState(() {
-                          // selectedIndex = index;
+                          selectedIndex = index;
                         });
                       },
                       child: Padding(
@@ -196,28 +210,48 @@ class _HomeScreen2State extends State<HomeScreen2> {
                                   children: [
                                     Row(
                                       children: [
-                                        Icon(Icons.star, size: w * 0.05, color: Colors.amber),
-                                        SizedBox(width: w * 0.02),
-                                        Text(
-                                          '4.0',
-                                          style: TextStyle(fontSize: w * 0.03, fontWeight: FontWeight.bold),
+                                        SizedBox(
+                                          height: w*0.1,
+                                          child: ListView.builder(
+                                            scrollDirection: Axis.horizontal,
+                                            itemCount: 5,
+                                            shrinkWrap: true,
+                                            physics: const NeverScrollableScrollPhysics(),
+                                            itemBuilder: (context, index) {
+                                              return Icon(
+                                                Icons.star,
+                                                size: w * 0.05,
+                                                color: Colors.amber,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                        SizedBox(width: w*0.02,),
+                                        CustomText(
+                                          text: "4.0",
+                                          fontSize: w * 0.03,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ],
                                     ),
                                     SizedBox(height: w * 0.02),
-                                    Text(
-                                      'STANZA LIVING HOSTEL',
-                                      style: TextStyle(fontSize: w * 0.04, fontWeight: FontWeight.bold),
+                                    CustomText(
+                                      text: "STANZA LIVING HOSTEL ",
+                                      fontSize: w * 0.04,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                     SizedBox(height: w * 0.02),
-                                    Text(
-                                      'RAMYA NAGARI, BAKULNAGAR, BIBWEWADI',
-                                      style: TextStyle(fontSize: w * 0.03, color: Colors.grey.shade400),
+                                    CustomText(
+                                      text: "RAMYA NAGARI, BAKULNAGAR, BIBWEWADI",
+                                      fontSize: w * 0.03,
+                                      color: Colors.grey.shade400,
                                     ),
                                     SizedBox(height: w * 0.02),
-                                    Text(
-                                      'RENT - STARTING FROM ₹10,699/MONTH',
-                                      style: TextStyle(fontSize: w * 0.03, fontWeight: FontWeight.bold, color: Colors.blue),
+                                    CustomText(
+                                      text: "RENT-STARTING FROM ₹10,699/MONTH ",
+                                      fontSize: w * 0.03,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
                                     ),
                                   ],
                                 ),
@@ -232,8 +266,12 @@ class _HomeScreen2State extends State<HomeScreen2> {
                 SizedBox(height: w*0.02,),
                 Padding(
                   padding:  EdgeInsets.only(left: w*0.03),
-                  child: Text("Popular Destination",style: TextStyle(color: Colors.black,fontSize: w*0.04,fontWeight: FontWeight.bold),),
-                ),
+                  child:  CustomText(
+                    text: "Popular Destination ",
+                    fontSize: w * 0.04,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),),
                 SizedBox(height: w*0.02,),
                 Container(
                   padding: EdgeInsets.all(w * 0.03),
@@ -267,46 +305,53 @@ class _HomeScreen2State extends State<HomeScreen2> {
                         children: [
                           Row(
                             children: [
-                              Text(
-                                "Asteria Hostel",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontSize: w * 0.04,
-                                ),
+                              CustomText(
+                                text: "Asteria Hostel",
+                                fontSize: w * 0.04,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
                               ),
                               SizedBox(width: w * 0.02),
-                              Text(
-                                "RENT-5.5K",
-                                style: TextStyle(
-                                  color: Colors.blue,
-                                  fontSize: w * 0.04,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              CustomText(
+                                text: "RENT-5.5K ",
+                                fontSize: w * 0.04,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
                               ),
                             ],
                           ),
                           SizedBox(height: w * 0.01),
-                          Text(
-                            "Ram Nagar, NT 0872, Katraj",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                              fontSize: w * 0.035,
-                            ),
+                          CustomText(
+                            text: "Ram Nagar, NT 0872, Katraj ",
+                            fontSize: w * 0.035,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
                           ),
                           SizedBox(height: w * 0.01),
                           Row(
                             children: [
-                              Icon(Icons.star, size: w * 0.04, color: Colors.orange),
-                              SizedBox(width: w * 0.01),
-                              Text(
-                                "5.0",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontSize: w * 0.04,
+                              SizedBox(
+                                height: w*0.1,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: 5,
+                                  shrinkWrap: true,
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  itemBuilder: (context, index) {
+                                    return Icon(
+                                      Icons.star,
+                                      size: w * 0.04,
+                                      color: Colors.orange,
+                                    );
+                                  },
                                 ),
+                              ),
+                              SizedBox(width: w * 0.01),
+                              CustomText(
+                                text: "5.0",
+                                fontSize: w * 0.04,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
                               ),
                             ],
                           ),
@@ -319,7 +364,11 @@ class _HomeScreen2State extends State<HomeScreen2> {
                 Center(
                   child: TextButton(onPressed: (){
 
-                  }, child: Text("NEXT",style: TextStyle(color: Colors.blue,fontSize: w*0.05))
+                  }, child:  CustomText(
+                    text: "NEXT ",
+                    fontSize: w * 0.05,
+                    color: Colors.blue,
+                  ),
                   ),
                 )
               ],

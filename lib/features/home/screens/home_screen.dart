@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/widgets/custom_text.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -31,9 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: w * 0.05),
-                  child: Text(
-                    'Current Location',
-                    style: TextStyle(fontSize: w * 0.035, color: Colors.grey),
+                  child:   CustomText(
+                    text: "Current Location",
+                    fontSize: w * 0.035,
+                    color: Colors.grey,
                   ),
                 ),
                 Padding(
@@ -42,10 +45,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Icon(Icons.location_on, color: Colors.indigo, size: w * 0.05),
                       SizedBox(width: w * 0.02),
-                      Text(
-                        "Bibwewadi, Pune",
-                        style: TextStyle(
-                            fontSize: w * 0.04, color: Colors.black, fontWeight: FontWeight.w500),
+                      CustomText(
+                        text: "Bibwewadi,Pune",
+                        fontSize: w * 0.04,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
                       ),
                       Icon(Icons.keyboard_arrow_down_outlined, color: Colors.black, size: w * 0.05),
                       const Spacer(),
@@ -110,9 +114,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Icon(items[index]['icon'], size: w * 0.06, color:isSelected ? Colors.white : Colors.grey, ),
                               SizedBox(width: w * 0.02),
-                              Text(
-                                items[index]['label'],
-                                style: TextStyle(fontSize: w * 0.03, fontWeight: FontWeight.w500,color: isSelected ? Colors.white : Colors.grey, ),
+                              CustomText(
+                                text: items[index]['label'],
+                                fontSize: w * 0.03,
+                                fontWeight: FontWeight.w500,
+                                color:isSelected?Colors.white:Colors.grey,
                               ),
                             ],
                           ),
@@ -162,26 +168,31 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   Icon(Icons.star, size: w*0.05, color: Colors.amber),
                                   SizedBox(width: w*0.02),
-                                  Text(
-                                    '4.0',
-                                    style: TextStyle(fontSize: w*0.03,fontWeight: FontWeight.bold),
+                                  CustomText(
+                                    text: "4.0",
+                                    fontSize: w * 0.03,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ],
                               ),
                               SizedBox(height: w*0.02),
-                              Text(
-                                'STANZA LIVING HOSTEL',
-                                style: TextStyle(fontSize: w*0.04, fontWeight: FontWeight.bold),
+                              CustomText(
+                                text: "STANZA LIVING HOSTEL",
+                                fontSize: w * 0.04,
+                                fontWeight: FontWeight.bold,
                               ),
                               SizedBox(height:w*0.02),
-                              Text(
-                                'RAMYA NAGARI, BAkULNAGAR, BIBWEWAI',
-                                style: TextStyle(fontSize: w*0.03,color: Colors.grey.shade400),
+                              CustomText(
+                                text: "RAMYA NAGARI, BAKULNAGAR, BIBWEWAI",
+                                fontSize: w * 0.03,
+                                color: Colors.grey.shade400,
                               ),
                               SizedBox(height: w*0.02),
-                              Text(
-                                'RENT - STARTING FROM ₹10,699/MONTH',
-                                style: TextStyle(fontSize: w*0.03, fontWeight: FontWeight.bold,color: Colors.blue),
+                              CustomText(
+                                text: "RENT-STARTING FROM ₹10,699/MONTH ",
+                                fontSize: w * 0.04,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
                               ),
                             ],
                           ),
@@ -193,9 +204,6 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
           ),
-
-
-
           ],
             ),
           ),

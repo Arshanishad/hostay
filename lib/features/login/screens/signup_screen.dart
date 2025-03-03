@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hostay/features/login/screens/gender_choosingPage.dart';
 import 'package:hostay/features/login/screens/signin_screen.dart';
-
 import '../../../core/common/globals.dart';
+import '../../../core/widgets/custom_text.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -133,13 +133,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     borderRadius: BorderRadius.circular(w * 0.04),
                   ),
                   child: Center(
-                    child: Text(
-                      "Create Account",
-                      style: TextStyle(
-                        fontSize: w * 0.04,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    child:  CustomText(
+                      text: "Create Account",
+                      fontSize: w * 0.04,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -147,10 +145,20 @@ class _SignupScreenState extends State<SignupScreen> {
               SizedBox(width: w*0.1),
               Padding(
                 padding:  EdgeInsets.all(w*0.1),
-                child: Text("Already have an account ? Click Here",style: TextStyle(color: Colors.grey,fontSize: w*0.045),),
+                child: CustomText(
+                  text: "Already have an account ? Click Here ",
+                  fontSize: w * 0.045,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey,
+                ),
               ),
                 SizedBox(width: w*0.02),
-              Text("for Admin Login",style: TextStyle(color: Colors.grey,fontSize: w*0.045),),
+              CustomText(
+                text: "for Admin Login",
+                fontSize: w * 0.045,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey,
+              ),
               SizedBox(width: w*0.02),
               Padding(
                 padding: EdgeInsets.all(w*0.02),
@@ -168,19 +176,21 @@ class _SignupScreenState extends State<SignupScreen> {
                       borderRadius: BorderRadius.circular(w*0.02),
                     ),
                   ),
-                  child: Text(
-                    "SIGN IN",
-                    style: TextStyle(
-                      fontSize: w * 0.025,
-                      color: Colors.white,
-                    ),
+                  child:  CustomText(
+                    text: "SIGN IN ",
+                    fontSize: w * 0.025,
+                    color: Colors.white,
                   ),
                 ),
               ),
               SizedBox(height: w*0.02),
               Padding(
                 padding:  EdgeInsets.symmetric(horizontal: w*0.05),
-                child: Text("By creating an account,you are agree to our Terms",style: TextStyle(fontSize: w*0.04,color: Colors.grey),),
+                child: CustomText(
+                  text: "By creating an account,you are agree to our Terms",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
+                ),
               )
             ],
           ),

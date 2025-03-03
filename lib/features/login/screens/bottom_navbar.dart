@@ -15,9 +15,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
 
 
   static const List<Widget> _pages = [
-  HomeScreen(),
+    HomeScreen(),
     HomeScreen2(),
-  HomeScreen3(),
+    HomeScreen3(),
     Center(child: Text("Profile Page")),
   ];
 

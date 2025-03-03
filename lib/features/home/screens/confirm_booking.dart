@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hostay/features/home/screens/student_details_page.dart';
 import '../../../core/common/globals.dart';
+import '../../../core/widgets/custom_text.dart';
 
 class ConfirmBooking extends StatefulWidget {
   const ConfirmBooking({super.key});
@@ -29,7 +31,11 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             ),
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: w*0.06),
-              child: Text("ROOM INFO",style: TextStyle(color: Colors.black,fontSize: w*0.04),),
+              child:CustomText(
+                text: "ROOM INFO",
+                fontSize: w * 0.04,
+                color: Colors.black,
+              ),
             ),
             SizedBox(height: w * 0.03),
       Padding(
@@ -40,21 +46,17 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "No of rooms",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "No of rooms",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "12",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "12",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -62,20 +64,16 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Room Type",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Room Type",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "Air Conditioned",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "Air Conditioned",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -83,20 +81,16 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Room",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Room",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "3 SHARING AND 2 SHARING",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "3 SHARING AND 2 SHARING",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -104,20 +98,16 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Charges",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Charges",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "100/-BOOKING CHARGES",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "100/-BOOKING CHARGES",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -125,20 +115,16 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Payment",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Payment",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "5K * 6=30K half yearly payment",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "5K * 6=30K half yearly payment",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -146,12 +132,10 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "GUARDIAN INFO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "GUARDIAN INFO",
+                  fontSize: w * 0.04,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -159,20 +143,16 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Name",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Name",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "Karan",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "Karan",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
                 ),
               ],
             ),
@@ -180,20 +160,16 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Email",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Email",
+                  fontSize: w * 0.04,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "karan7@gmail.com",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "Karan7@gmail.com",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
                 ),
               ],
             ),
@@ -201,44 +177,38 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Mobile Number",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: w * 0.04,
-                  ),
+                CustomText(
+                  text: "Mobile Number",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
                 ),
-                Text(
-                  "6898668966",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: w * 0.04,
-                    fontWeight: FontWeight.w500,
-                  ),
+                CustomText(
+                  text: "6898668966",
+                  fontSize: w * 0.04,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
                 ),
               ],
             ),
             SizedBox(height: w * 0.02),
-            Text(
-              "FOR VISIT TIMINGS",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: w * 0.04,
-              ),
+            CustomText(
+              text: "FOR VISIT TIMING",
+              fontSize: w * 0.04,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey,
             ),
-            Text(
-              "WEEKDAYS-10AM TO 5PM",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: w * 0.03,
-              ),
+            CustomText(
+              text: "WEEKDAYS-10AM TO 5PM",
+              fontSize: w * 0.04,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey,
             ),
-            Text(
-              "WEEKENDS-11AM TO 7PM",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: w * 0.03,
-              ),
+            CustomText(
+              text: "WEEKENDS 11AM TO 7PM",
+              fontSize: w * 0.04,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey,
             ),
           ],
         ),
@@ -246,6 +216,7 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
             SizedBox(height: w*0.09),
             InkWell(
               onTap: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context) => const StudentDetailsPage()));
               },
               child: Center(
                 child: Container(
@@ -263,13 +234,11 @@ class _ConfirmBookingState extends State<ConfirmBooking> {
                     borderRadius: BorderRadius.circular(w * 0.04),
                   ),
                   child: Center(
-                    child: Text(
-                      "CONFIRM BOOKING",
-                      style: TextStyle(
-                        fontSize: w * 0.04,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    child:    CustomText(
+                      text: "CONFIRM BOOKING",
+                      fontSize: w * 0.04,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ),

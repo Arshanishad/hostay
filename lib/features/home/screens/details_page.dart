@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hostay/features/home/screens/confirm_booking.dart';
-
+import '../../../core/widgets/custom_text.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});
@@ -51,13 +51,11 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
                     SizedBox(width: w * 0.03),
                     Center(
-                      child: Text(
-                        "Details",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: w * 0.05,
-                        ),
+                      child: CustomText(
+                        text: "Details",
+                        fontSize: w * 0.05,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Container(
@@ -86,7 +84,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   return InkWell(
                     onTap: () {
                       setState(() {
-                        // selectedIndex = index;
+                         selectedIndex = index;
                       });
                     },
                     child: Padding(
@@ -156,26 +154,31 @@ class _DetailsPageState extends State<DetailsPage> {
                                     children: [
                                       Icon(Icons.star, size: w * 0.05, color: Colors.amber),
                                       SizedBox(width: w * 0.02),
-                                      Text(
-                                        '4.0',
-                                        style: TextStyle(fontSize: w * 0.03, fontWeight: FontWeight.bold),
+                                      CustomText(
+                                        text: "4.0",
+                                        fontSize: w * 0.03,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                     ],
                                   ),
                                   SizedBox(height: w * 0.02),
-                                  Text(
-                                    'STANZA LIVING HOSTEL',
-                                    style: TextStyle(fontSize: w * 0.04, fontWeight: FontWeight.bold),
+                                  CustomText(
+                                    text: "STANZA LIVING HOTEL",
+                                    fontSize: w * 0.04,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                   SizedBox(height: w * 0.02),
-                                  Text(
-                                    'RAMYA NAGARI, BAKULNAGAR, BIBWEWADI',
-                                    style: TextStyle(fontSize: w * 0.03, color: Colors.grey.shade400),
+                                  CustomText(
+                                    text: "RAMYA NAGARI,BAKULNAGAR, BIBWEWADI",
+                                    fontSize: w * 0.03,
+                                    color: Colors.grey.shade400,
                                   ),
                                   SizedBox(height: w * 0.02),
-                                  Text(
-                                    'RENT - STARTING FROM ₹10,699/MONTH',
-                                    style: TextStyle(fontSize: w * 0.03, fontWeight: FontWeight.bold, color: Colors.blue),
+                                  CustomText(
+                                    text: "RENT - STARTING FROM ₹10,699/MONTH",
+                                    fontSize: w * 0.03,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.blue,
                                   ),
                                 ],
                               ),
@@ -215,9 +218,11 @@ class _DetailsPageState extends State<DetailsPage> {
                             children: [
                               Icon(items[index]['icon'], size: w * 0.06, color:isSelected ? Colors.white : Colors.grey, ),
                               SizedBox(width: w * 0.02),
-                              Text(
-                                items[index]['label'],
-                                style: TextStyle(fontSize: w * 0.025, fontWeight: FontWeight.w500,color: isSelected ? Colors.white : Colors.grey, ),
+                              CustomText(
+                                text: items[index]['label'],
+                                fontSize: w * 0.025,
+                                fontWeight: FontWeight.w500,
+                                color: isSelected ? Colors.white : Colors.grey,
                               ),
                             ],
                           ),
@@ -231,8 +236,18 @@ class _DetailsPageState extends State<DetailsPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Golden  Leaf Hostel",style: TextStyle(fontWeight: FontWeight.bold,fontSize: w*0.04,color: Colors.black),),
-                    Text("4.5K/MONTH",style: TextStyle(fontWeight: FontWeight.bold,fontSize: w*0.035,color: Colors.blue),),
+                    CustomText(
+                      text: "Golden Leaf Hostel",
+                      fontSize: w * 0.04,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                    CustomText(
+                      text: "4.5K/MONTH",
+                      fontSize: w * 0.035,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
                   ],
                 ),
               ),
@@ -243,28 +258,36 @@ class _DetailsPageState extends State<DetailsPage> {
                     child: Icon(Icons.location_on,color: Colors.blue,size: w*0.05,),
                   ),
                   SizedBox(width: w*0.02,),
-                  Text("Upper indira nagar,NT 0870,Bibwewadi",style: TextStyle(fontWeight: FontWeight.bold,fontSize: w*0.035,color: Colors.grey.shade400),),
+                  CustomText(
+                    text: "Upper indira nagar,NT 0870,Bibwewadi",
+                    fontSize: w * 0.035,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey.shade400,
+                  ),
                 ],
               ),
               Align(
                 alignment: Alignment.topLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: w*0.025),
-                    child: Text("Description",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: w*0.04),),
+                    child:   CustomText(
+                      text: "Description",
+                      fontSize: w * 0.04,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   )),
               SizedBox(height: w*0.03,),
               Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding: EdgeInsets.only(left: w * 0.03),
-                  child: Text(
-                    "Start living your best platform day one.\n"
+                  child:   CustomText(
+                    text: "Start living your best platform day one.\n"
                         "Bring a box full of hopes, dreams, ambitions, and of course,"
                         "your personal belongings.",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: w * 0.035,
-                    ),
+                    fontSize: w * 0.035,
+                    color: Colors.grey,
                   ),
                 ),
               ),
@@ -273,13 +296,22 @@ class _DetailsPageState extends State<DetailsPage> {
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: w*0.025),
-                    child: Text("CONTACT-98674456XX",style: TextStyle(color: Colors.black,fontSize: w*0.03),),
+                    child:  CustomText(
+                      text: "CONTACT-98674456XX",
+                      fontSize: w * 0.03,
+                      color: Colors.black,
+                    ),
                   )),
               Align(
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: w*0.025),
-                    child: Text("Preview",style: TextStyle(color: Colors.black,fontSize: w*0.045,fontWeight: FontWeight.bold),),
+                    child:   CustomText(
+                      text: "Preview",
+                      fontSize: w * 0.045,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   )),
               SizedBox(
                 height: w*0.2,
@@ -345,12 +377,10 @@ class _DetailsPageState extends State<DetailsPage> {
                       borderRadius: BorderRadius.circular(w*0.02),
                     ),
                   ),
-                  child: Text(
-                    "Book Now",
-                    style: TextStyle(
-                      fontSize: w * 0.035,
-                      color: Colors.white,
-                    ),
+                  child:   CustomText(
+                    text: "Book Now",
+                    fontSize: w * 0.035,
+                    color: Colors.white,
                   ),
                 ),
               ),
