@@ -24,7 +24,7 @@ class _ListingScreenState extends State<ListingScreen> {
             children: [
               ListView.builder(
                 shrinkWrap: true,
-                itemCount: 2,
+                itemCount: 5,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.symmetric(
