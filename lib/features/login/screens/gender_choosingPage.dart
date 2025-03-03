@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hostay/features/login/screens/bottom_navbar.dart';
-
 import '../../../core/common/globals.dart';
 
 class GenderChooseIngPage extends StatefulWidget {
@@ -22,7 +21,8 @@ class _GenderChooseIngPageState extends State<GenderChooseIngPage> {
             children: [
               Align(
                 alignment: Alignment.topCenter,
-                  child: Text("What's your gender?",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: w*0.07),)),
+                  child: Text("What's your gender?",style: TextStyle(
+                      fontWeight: FontWeight.bold,color: Colors.black,fontSize: w*0.07),)),
               SizedBox(height: w*0.02),
               Expanded(
                 child: Row(
